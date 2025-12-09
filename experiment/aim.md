@@ -1,1 +1,1 @@
-### Aim of the experiment
+### The aim of the experiment is to understand the basic components of an Artificial Neural Network (ANN) by configuring the layers, assigning weights and biases, and calculating the output error.

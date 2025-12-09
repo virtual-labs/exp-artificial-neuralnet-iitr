@@ -1,39 +1,63 @@
 {
-  "version": 2.0,
-  "questions": [
-    {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+  "content": {
+    "title": "To study and implement the working of an Artificial Neural Network",
+    "section": "Pre-Test",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Which of the following is not a type of artificial neural network?",
+        "options": [
+          "a. Feedforward Neural Network",
+          "b. Recurrent Neural Network",
+          "c. Convolutional Neural Network",
+          "d. Decision Tree Neural Network"
+        ],
+        "answer": "d"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      {
+        "id": "q2",
+        "question": "What is the primary inspiration behind Artificial Neural Networks (ANNs)?",
+        "options": [
+          "a. Computer programming",
+          "b. Human brain",
+          "c. Quantum mechanics",
+          "d. Genetic algorithms"
+        ],
+        "answer": "b"
       },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+      {
+        "id": "q3",
+        "question": "Which activation function is commonly used in the output layer for binary classification tasks?",
+        "options": [
+          "a. ReLU",
+          "b. Sigmoid",
+          "c. Tanh",
+          "d. Softmax"
+        ],
+        "answer": "b"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      {
+        "id": "q4",
+        "question": "The process of adjusting the weights of a neural network during training is known as:",
+        "options": [
+          "a. Forward Propagation",
+          "b. Backward Propagation",
+          "c. Gradient Descent",
+          "d. Activation Function"
+        ],
+        "answer": "b"
       },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    }
-  ]
+      {
+        "id": "q5",
+        "question": "Which layer of a neural network is responsible for making predictions or producing output values?",
+        "options": [
+          "a. Input Layer",
+          "b. Hidden Layer",
+          "c. Output Layer",
+          "d. Dropout Layer"
+        ],
+        "answer": "c"
+      }
+    ]
+  }
 }
