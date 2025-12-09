@@ -1,1 +1,1 @@
-## Experiment name
+## To study and implement the working of an Artificial Neural Network
