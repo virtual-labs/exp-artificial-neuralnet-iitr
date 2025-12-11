@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="firstContainer">
+    <div class="container">
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">×</span>
+                <h2 style="    margin-top: 10px;
+    margin-bottom: 10px;">Instructions</h2>
+            </div>
+            <div class="modal-body">
+                
+                    <ol type="1" style="font-size: 18px; text-align: justify;color:black">
+                      <li>Click on the <b>CREATE</b> tab.</li>
+                      <li>Select the number of nodes for all three layers and click the <b>SUBMIT</b> button.</li>
+                      <li>Click on <b>NEXT </b> button to proceed further.</li>
+                      <li>Choose an input value for each node in the input layer and an output value for each node in the output layer, then click the <b>SUBMIT</b> button.</li>
+                      <li>Click the <b>NEXT</b> button to initialize the weights.</li>
+                      <li>Choose the source (Xᵢ) and destination (Hᵢ), enter the weight value, then click the <b>SUBMIT</b> button.</li>
+                      <li>Repeat the previous step (6) for every combination of source (Xᵢ) and destination (Hᵢ).</li>
+                      <li>Now, select the source and destination to connect the hidden layer to the output layer. Enter the weight value and click the <b>SUBMIT</b> button.</li>
+                      <li>Repeat step 8 for every combination of source (Hᵢ) and destination (Yᵢ).</li>
+                      <li>Click the <b>NEXT</b> button to compute the forward propagation.</li>
+                      <li>Enter the bias value (random) and click the <b>SUBMIT</b> button.</li>
+                      <li>For each node in the hidden layer, calculate the summation by entering the appropriate input and weight values, then click the <b>SUBMIT</b> button.</li>
+                      <li>Repeat the summation process for each node in the output layer, using the same method.</li>
+                      <li>Finally, click the <b>ERROR</b> button  to compute the Mean Squared Error (MSE).
+                      </li>     
+                    </ol>
+                    
+                    <ol type="i">
+                      <p style="color:#FF6600">Formulae:</p>
+                      <li>To compute <i>y<sub>in</sub></i> for an activation function : 
+                      <div style="display: flex; justify-content: center; margin-top: -5px;">
+                     
+                        <img style="width: 150px;"
+                        src="images/summation.png"
+                          alt="" />
+                      </div>
+                    </li>
+                    <li>Sigmoid activation function : 
+                      <div style="display: flex; justify-content: center; margin-top: -5px;">
+                     
+                        <img style="width: 120px;"
+                        src="images/sigmoid.png"
+                          alt="" />
+                      </div>
+                    </li>
+                    <li>Mean Squared Error (MSE) : 
+                      <div style="display: flex; justify-content: center; margin-top: -5px;">
+                     
+                        <img style="width: 170px;"
+                        src="images/mse.jpg"
+                          alt="" />
+                      </div>
+                    </li>
+                    </ol> 
+                  
+                    <p><span style="color:#FF6600">Note:</span> In our simulation, we used the same bias for every node; however, in practice, 
+                      biases are often adjusted individually to allow for more flexibility in learning complex patterns.</p>
+            </div>
+            <div class="modal-footer">
+                <br>
+            </div>
+        </div>
+    </div>
+      <header class="header">
+        <div style="display: flex; width: 100%; height: 35px">
+          <div id="controlFirstTab" class="tablinks" style="border-top-left-radius: 10px;;display: flex; border-right: 2px solid black; color: white">
+            <div style="
+                  font-size: 20px;
+                  padding-top: 5px;
+                  padding-left: 10px;
+                  padding-right: 10px;
+                  font-weight: bold;
+                  border-top-left-radius: 10px;
+                  cursor: pointer;
+                ">
+              CREATE
+            </div>
+            <img id="createimg" src="images/create1.png" style="margin-top: 3px; margin-right: 10px; height: 85%" alt="" />
+          </div>
+
+          <div id="controlFirstTabDisabled" class="tablinks" style="
+                display: none;
+                border-right: 2px solid black;
+                color: white;
+                cursor: not-allowed;
+                opacity: 0.6;
+              ">
+            <div style="
+                  font-size: 20px;
+                  padding-top: 5px;
+                  padding-left: 10px;
+                  padding-right: 10px;
+                ">
+              CREATE
+            </div>
+            <img src="images/create1.png" style="margin-top: 3px; margin-right: 10px; height: 85% ;   cursor: not-allowed;"
+              alt="" />
+          </div>
+
+          <div id="networkTabDisabled" class="tablinks"
+            style="display: none; border-right: 2px solid black; color: white">
+            <div style="
+                  font-size: 20px;
+                  padding-top: 5px;
+                  padding-left: 10px;
+                  padding-right: 10px;
+                ">
+              CONNECT
+            </div>
+            <img src="images/multi.png" style="margin-top: 3px; margin-right: 10px; height: 85% " alt="" />
+          </div>
+
+          <div id="networkTab" class="tablinks" style="display: flex; border-right: 2px solid black; color: white">
+            <div style="
+                  font-size: 20px;
+                  padding-top: 5px;
+                  padding-left: 10px;
+                  padding-right: 10px;
+                  cursor: not-allowed;
+                  opacity: 0.6;
+                  color: white;
+                ">
+              CONNECT
+            </div>
+            <img src="images/multi1.png" style="margin-top: 3px; margin-right: 10px; height: 85% ;   cursor: not-allowed;"
+              alt="" />
+          </div>
+
+          <div id="disable-compute-tab" class="tablinks"
+            style="display: flex; border-right: 2px solid black; color: white">
+            <div style="
+                  font-size: 20px;
+                  padding-top: 5px;
+                  padding-left: 10px;
+                  padding-right: 10px;
+                  cursor: not-allowed;
+                  opacity: 0.6;
+                ">
+              COMPUTE
+            </div>
+            <img src="images/calculator1.png" style="margin-top: 3px; margin-right: 10px; height: 85% ;   cursor: not-allowed;"
+              alt="" />
+          </div>
+          <div id="enable-compute-tab" class="tablinks"
+            style="display: none; border-right: 2px solid black; color: white">
+            <div style="
+                  font-size: 20px;
+                  padding-top: 5px;
+                  padding-left: 10px;
+                  padding-right: 10px;
+                ">
+              COMPUTE
+            </div>
+            <img src="images/calculator.png" style="margin-top: 3px; margin-right: 10px; height: 85%" alt="" />
+          </div>
+
+          <div id="disable-analyse-tab" class="tablinks"
+          style="display: flex; border-right: 2px solid black; color: white">
+          <div style="
+                font-size: 20px;
+                padding-top: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+                cursor: not-allowed;
+                opacity: 0.6;
+              ">
+            ANALYZE
+          </div>
+          <img src="images/analyse.png" style="margin-top: 3px; margin-right: 10px; height: 85% ;   cursor: not-allowed;"
+            alt="" />
+        </div>
+        <div id="enable-analyse-tab" class="tablinks"
+          style="display: none; border-right: 2px solid black; color: white">
+          <div style="
+                font-size: 20px;
+                padding-top: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+              ">
+            ANALYZE
+          </div>
+          <img src="images/analyse1.png" style="margin-top: 3px; margin-right: 10px; height: 85%" alt="" />
+        </div>
+
+        </div>
+        <span class="header-textb modal-trigger" style="text-decoration: none">INSTRUCTIONS</span>
+      </header>
+
+
+      
+
+  
+
+      <div class="sec-con" id="sec">
+        <div style="display: flex">
+          <div id="controlFirstDiv" class="controls-first" style="display: none">
+            <header class="header-box">CONTROLS</header>
+
+            <div style="height: 135px">
+              <div class="controllers-first">
+                <div class="form-group">
+                  <h3>Select Number of Nodes in:</h3>
+                  <label id="label-input-layer" for="control-input" class="labels" style="font-size: 25px;margin-left: 10px;">
+                    Input Layer:
+                  </label>
+                  <select id="control-input-select" class="controller-inputs-first" style="margin-left: 30px;">
+                    <option value="0" selected hidden>0</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                  <br>
+                  <br>
+                  <br>
+                  <label id="label-hidden-layer" for="control-input" class="labels"
+                    style="font-size: 25px; margin-left: 10px;">
+                    Hidden Layer:
+                  </label>
+
+                  <select id="control-hidden-select" class="controller-inputs-first" style="margin-left: 10px;">
+                    <option value="0" selected disabled hidden>0</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                  <br>
+                  <br>
+                  <br>
+
+                  <label id="label-output-layer" for="control-input" class="labels"
+                    style="font-size: 25px; margin-left: 10px;">Output Layer:</label>
+
+                  <select id="control-output-select" class="controller-inputs-first" style="margin-left: 16px;">
+                    <option value="0" selected disabled hidden>0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                  </select>
+                </div>
+              </div>
+
+              <br>
+              <br>
+              <div class="controllers-btn-first">
+                <button id="input-layer-submit-button" class="btns-first" onclick="submitButtonOfControls()">
+                  SUBMIT
+                </button>
+
+
+                <button id="resetButtonInput" class="btns-first" onclick="resetInput()" disabled >
+                  RESET
+                </button>
+               
+                <button id="output-layer-button" class="btns-first-next" disabled onclick="nextLayerRedirectButton()"
+                 >
+                  NEXT
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div id="nodeCreation" class="nodeCreation-first" style="display: none">
+            <header class="header-box">LAYERS</header>
+
+            <div id="nodeCreationCanva" style="display: flex; flex-direction: row">
+              <canvas id="myCanvasNode" width="490" height="320"></canvas>
+            </div>
+          </div>
+
+          <div id="terminologyDiv" class="terminology" style="display: none">
+            <header class="header-box">TERMINOLOGY</header>
+
+            <div style="height: 135px">
+              <div id="terminilogyCanva" style="display: flex; flex-direction: row">
+                
+                <div class="text" style="margin-left: 20px; margin-right: 40px">
+                  <div id="para1" class="term" style="margin-top:10px;">
+                    1. <b style="color:#FF6600">Input Layer :</b> The input layer is the starting point of
+                    the network and receives the initial data or features.
+                </div>
+                  <p id="para2" class="term">
+                    2. <b style="color:#FF6600">Hidden Layer :</b> The hidden layer(s) are intermediate
+                    layers between the input and output layers.
+                  </p>
+                  <p id="para3" class="term">
+                    3. <b style="color:#FF6600">Output Layer :</b> The output layer is the final layer of
+                    the network, responsible for producing the desired output
+                    or prediction.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="network" id="networkDiv" style="display: none">
+          <header class="header-box">NETWORK</header>
+          <div id="networkCanva" style="display: flex; flex-direction: row">
+            <canvas id="myCanvas" width="456" height="280"></canvas>
+          </div>
+        </div>
+
+        <div class="controls" id="controlsDiv" style="display: none">
+          <header class="header-box">INITIALIZATION</header>
+
+          <div style="display: flex; height: 135px">
+            <div id="pre_controllers_container_id" class="pre_controllers_container">
+              
+              <div class="pre_controller">
+                <div class="form-group" id="formone">
+                  <label for="nodeone" class="labels">X<sub>1</sub> : </label>
+                
+                  <select id="nodeone" class="controller-inputs-first">
+                    <option value="NULL" selected disabled hidden>
+                      NULL
+                    </option>
+                    <option value="-1">-1</option>
+                    <option value="1">1</option>
+                  </select>
+                </div>
+
+                <div class="form-group" id="formtwo" style="margin-top: 15px">
+                  <label for="nodetwo" class="labels">X<sub>2</sub> : </label>
+
+                  <select id="nodetwo" class="controller-inputs-first">
+                    <option value="NULL" selected disabled hidden>
+                      NULL
+                    </option>
+                    <option value="-1">-1</option>
+                    <option value="1">1</option>
+                  </select>
+                </div>
+
+                <div class="form-group" id="formthree" style="margin-top: 15px">
+                  <label for="nodethree" class="labels">X<sub>3</sub> :
+                  </label>
+
+                  <select id="nodethree" class="controller-inputs-first">
+                    <option value="NULL" selected disabled hidden>
+                      NULL
+                    </option>
+                    <option value="-1">-1</option>
+                    <option value="1">1</option>
+                  </select>
+                </div>
+
+                <div class="form-group" id="formYone" style="margin-top: 15px">
+                  <label for="nodeYone" class="labels">Y<sub>1</sub> :
+                  </label>
+
+                  <select id="nodeYone" class="controller-inputs-first">
+                    <option value="NULL" selected disabled hidden>
+                      NULL
+                    </option>
+                    <option value="-1">-1</option>
+                    <option value="1">1</option>
+                  </select>
+                </div>
+                <div class="form-group" id="formYtwo" style="margin-top: 15px">
+                  <label for="nodeYtwo" class="labels">Y<sub>2</sub> :
+                  </label>
+
+                  <select id="nodeYtwo" class="controller-inputs-first">
+                    <option value="NULL" selected disabled hidden>
+                      NULL
+                    </option>
+                    <option value="-1">-1</option>
+                    <option value="1">1</option>
+                  </select>
+                </div>
+
+              </div>
+
+              <div class="controllers-btn-pre-controllers" style="margin-top:-10px">
+                <button id="enable-submit-3-1-button" class="btns" style="margin-bottom: 15px ; display: none;"
+                  onclick="precontrollerSubmitThreeOne()">
+                  SUBMIT
+                </button>
+                <button id="enable-submit-2-1-button" class="btns" style="margin-bottom: 15px ; display: none;"
+                  onclick="precontrollerSubmitTwoOne()">
+                  SUBMIT
+                </button>
+                <button id="enable-submit-2-2-button" class="btns" style="margin-bottom: 15px ; display: none;"
+                  onclick="precontrollerSubmitTwoTwo()">
+                  SUBMIT
+                </button>
+                <button id="enable-submit-3-2-button" class="btns" style="margin-bottom: 15px ; display: none;"
+                  onclick="precontrollerSubmitThreeTwo()">
+                  SUBMIT
+                </button>
+
+                <button class="btns" id="resetInput" title="clears inputted value" style="margin-top: 15px" disabled onclick="precontrollerReset()">
+                  RESET
+                </button>
+                <button class="btns" id="enable-next-button" style="margin-top: 25px;" disabled
+                  onclick="precontrollerNext()">
+                  NEXT
+                </button>
+
+              </div>
+            </div>
+
+            <div id="controllers_id" class="controllers" style="display: none">
+
+              <div class="form-group" id="form_group_for_input_source">
+                <label for="source" class="labels" style="margin-left: 10px;">Source:</label>
+                <select name="inputB" id="source" class="controller-inputs-select" style="margin-left: 60px"></select>
+              </div>
+
+              <div class="form-group" id="form_group_for_input_destination">
+                <label for="destination" class="labels" style="margin-left: 10px;">Destination:</label>
+                <select name="inputC" id="destination" class="controller-inputs-select"
+                  style="margin-left: 10px"></select>
+              </div>
+
+              <div class="form-group">
+                <label style="margin-right: 59px; margin-left: 10px;" for="weight" class="labels">Weight:</label>
+
+                <div class="tooltip">
+                  <input type="number" id="weight" class="controller-inputs" name="inputD" title="Range: -1 to 1, rounded to two decimal places."/>
+                </div>
+              </div>
+            </div>
+            <div id="controllers-btn-id" class="controllers-btn" style="display: none">
+              <button id="connectSubmitButtonEnabled" class="btns" style="margin-bottom: 15px; margin-top: -13px"
+                onclick="submitFunction()">
+                SUBMIT
+              </button>
+         
+
+              <button id="resetButton" class="btns" style="margin-top: 15px" disabled title="resets all the edges" onclick="resetFunction()">
+                RESET
+              </button>
+
+              <button id="nextButtontwoenabled" class="btns"
+                style="margin-top: 25px; opacity: 0.6; cursor: not-allowed">
+                NEXT
+              </button>
+              <button id="nextButtontwodisabled" class="btns" style="margin-top: 25px; display: none"
+                onclick="nextTwoFunction()">
+                NEXT
+              </button>
+            </div>
+          </div>
+
+
+          
+        </div>
+
+        <div class="controlsObserv" id="observationSmallDiv" style="display: none; ">
+          <header class="header-box">WEIGHT TABLE</header>
+            <table style="width: 80%; margin-top: 16px" id="myTableCompute">
+              <tr>
+                <th style="width: 10%">S.No</th>
+                <th style="width: 10%">Source (Xᵢ/Hᵢ)</th>
+                <th style="width: 10%">Destination (Hⱼ/Yⱼ)</th>
+                <th style="width: 10%">Weight (Wᵢⱼ)</th>
+              </tr>
+            </table>
+        </div>
+
+        <div class="observationTable" id="observationTableDiv" style="display: none">
+          <header class="header-box">WEIGHT TABLE</header>
+
+          <table style="width: 80%; margin-top: 16px" id="myTable">
+            <tr>
+              <th style="width: 10%">S.No</th>
+              <th style="width: 10%">Source (Xᵢ/Hᵢ)</th>
+              <th style="width: 10%">Destination (Hⱼ/Yⱼ)</th>
+              <th style="width: 10%">Weight (Wᵢⱼ)</th>
+            </tr>
+          </table>
+        </div>
+
+        <div class="observationTableSmall" id="calculationDiv" style="display: none; margin-left: 460px">
+          <header class="header-box" id="cal">SUMMATION</header>
+
+          <div style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+              ">
+            <div class="input-group">
+              <h2 id="expressionH1">H₁ = </h2>
+              &nbsp; &nbsp;
+              <input class="inputcompute" type="number" id="x1" placeholder="X₁" />
+              <input class="inputcompute" type="number" id="h1" placeholder="H₁" style="display: none" />
+
+              <span id="multiply2" style="margin-left: -8px; margin-right: 4px;"> * </span>
+
+              <input class="inputcompute" type="number" id="w1" placeholder="W₁" />
+
+              <span id="plus2" style="margin-left: -8px; margin-right: 4px;"> + </span>
+
+              <input class="inputcompute" type="number" id="x2" placeholder="X₂" />
+              <input class="inputcompute" type="number" id="h2" placeholder="H₂" style="display: none" />
+
+              <span id="multiply3" style="margin-left: -8px; margin-right: 4px;"> * </span>
+
+              <input class="inputcompute" type="number" id="w2" placeholder="W₂" />
+
+              <span id="plus" style="margin-left: -8px; margin-right: 4px;"> + </span>
+
+              <input class="inputcompute" type="number" id="x3" placeholder="X₃" " />
+                <input
+                  class=" inputcompute" type="number" id="h3" placeholder="H₃" style="display: none" />
+
+              <span id="multiply" style="margin-left: -8px; margin-right: 4px;"> * </span>
+
+              <input class="inputcompute" type="number" id="w3" placeholder="W₃" />
+
+              <span id="plus1" style="display: none ; margin-left: -8px; margin-right: 4px;"> + </span>
+
+              <input class="inputcompute" type="number" id="h4" placeholder="H₄" style="display: none" />
+
+              <span id="multiply1" style="display: none ;  margin-left: -8px; margin-right: 4px;"> * </span>
+
+              <input style="display: none" class="inputcompute" type="number" id="w4" placeholder="W₄" />
+
+              <span id="plus3" style="margin-left: -8px; margin-right: 4px;"> + </span>
+
+              <span style="margin-left: 5px" id="biasSpan"> </span>
+              <span style="margin-left: 5px; display: none" id="ansSpan">
+              </span>
+            </div>
+          </div>
+
+          <div class="controllers-btn-compute">
+            <button id="submitButtonCompute" class="btns-compute" onclick="submitForm()">
+              SUBMIT
+            </button>
+            <button id="resetButtonCompute" class="btns-compute" title="clears inputted value." onclick="resetForm()">
+              RESET
+            </button>
+            <button id="nextButtonCompute" class="btns-compute" onclick="nextStep()" disabled>
+              NEXT
+            </button>
+          </div>
+        </div>
+
+        <div class="lossTableSmall" id="lossDiv" style="display: none; margin-left: 475px">
+          <header class="header-box" id="cal">MEAN SQUARED ERROR</header>
+
+          <div style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+              ">
+            <div class="input-group" style="padding-top: 100px;">
+              <h2 id="expressionMSE"></h2>
+              &nbsp; &nbsp;
+              
+            </div>
+          </div>
+
+         
+        </div>
+        <div class="analyse-btn" id="analysebuttons">
+          <button id="lossButton" class="btns-compute" onclick="loss()">
+            ERROR
+          </button>
+         
+          <button class="btns-compute" id="print" onclick="window.print()" disabled>
+            PRINT
+          </button>
+        </div>
+      </div>
+
+      <div id="matter" style="width:80%;margin-top: 2.3in; margin-left: 1in;">
+        <center>
+            <p style="color:white;font-size: 24px;text-align: justify;">
+                To begin, click on the <b style="color:#FF6600">CREATE</b> tab.</span>
+             </p>
+             
+        </center>
+        
+    </div>
+
+      <footer class="footer">
+        <span class="footer-text"> © 2025 Virtual Labs, IIT Roorkee</span>
+      </footer>
+    </div>
+  </div>
+  <script>
+    // JavaScript code to handle the modal functionality
+    document.addEventListener("DOMContentLoaded", function () {
+      const modal = document.getElementById("myModal");
+      const modalTrigger = document.querySelector(".modal-trigger");
+      const closeModal = document.querySelector(".close");
+
+      function openModal() {
+        modal.style.display = "block";
+      }
+
+      function closeModalFn() {
+        modal.style.display = "none";
+      }
+
+      modalTrigger.addEventListener("click", openModal);
+      closeModal.addEventListener("click", closeModalFn);
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/script.js"></script>
+<script src="../assets/js/iframeResize.js"></script>
+        
+        </body>
+
+</html>

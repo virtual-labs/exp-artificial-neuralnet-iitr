@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What role does the learning rate play in the training of a neural network?",
+    "answers": {
+      "a": "Control the network architecture",
+      "b": "Adjust weights during back-propagation",
+      "c": "Determine the number of neurons in a layer",
+      "d": "Initialize the bias terms"
+    },
+    "correctAnswer": "b"
+  },
+  {
+    "question": "In a neural network, what does the term 'epoch' refer to?",
+    "answers": {
+      "a": "A single pass through the entire dataset",
+      "b": "The number of layers in the network",
+      "c": "The learning rate during training",
+      "d": "The output of the network"
+    },
+    "correctAnswer": "a"
+  },
+  {
+    "question": "At the end of each epoch of training a neural network, the loss is calculated by comparing the model's _______________ to the true labels.",
+    "answers": {
+      "a": "Predictions",
+      "b": "Biases",
+      "c": "Weights",
+      "d": "Observations"
+    },
+    "correctAnswer": "a"
+  },
+  {
+    "question": "What is the role of bias in a neuron?",
+    "answers": {
+      "a": "It determines the learning rate.",
+      "b": "It prevents over-fitting.",
+      "c": "It adjusts the output of the neuron.",
+      "d": "It controls the number of hidden layers."
+    },
+    "correctAnswer": "c"
+  },
+  {
+    "question": "Which optimization algorithm is commonly used for adjusting weights in training neural networks?",
+    "answers": {
+      "a": "K-Means",
+      "b": "Genetic Algorithm",
+      "c": "Gradient Descent",
+      "d": "Principal Component Analysis (PCA)"
+    },
+    "correctAnswer": "c"
+  }
+]
