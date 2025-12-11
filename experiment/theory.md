@@ -8,7 +8,7 @@ A typical neural network consists of three main types of layers : the input laye
 
 <center>  
 <img style="mix-blend-mode: darken;" src="images\ann.png" alt="The architecture of an artificial neural network">
-<figcaption><strong>Fig. 1 The architecture of an artificial neural network</strong></figcaption>
+<figcaption><strong>Fig. 1 The architecture of an artificial neural network</strong></figcaption>s
 </center>
 
 #### **Artificial neurons vs Biological neurons**
@@ -16,7 +16,7 @@ A typical neural network consists of three main types of layers : the input laye
 The concept of artificial neural networks comes from biological neurons found in human brains, so they share a lot of similarities in structure and function. The structure of artificial neural networks is inspired by biological neurons. A biological neuron has a cell body or soma to process the impulses, dendrites to receive them, and an axon that transfers them to other neurons. The input nodes of artificial neural networks receive input signals, the hidden layer nodes compute these input signals, and the output layer nodes compute the final output by processing the hidden layer’s results using activation functions.
 
 <center>  
-<img style="mix-blend-mode: darken;" src="images\node.png" alt=" Biological neurons to Artificial neurons" width="65%">
+<img style="mix-blend-mode: darken;" src="images\node.png" alt=" Biological neurons to Artificial neurons">
 <figcaption><strong>Fig. 2 Biological neurons to Artificial neurons</strong></figcaption>
 </center>
 
@@ -60,18 +60,17 @@ Loss functions are classified into two classes based on the type of learning tas
 <li><b>Regression Models :</b> predict continuous values.<br>
 <ol>
 <li>Mean Squared Error (MSE)</li>
-<b>MSE = (1/n) * Σ(yᵢ - ȳᵢ)²</b>
+<center><b>MSE = (1/n) * Σ(yᵢ - ȳᵢ)²</b></center>
 <li>Mean Absolute Error (MAE)</li>
-<b>MAE = (1/n) * Σ|yᵢ - ȳᵢ|</b>
+<center><b>MAE = (1/n) * Σ|yᵢ - ȳᵢ|</b></center>
 <li>Mean Bias Error (MBE)</li>
-<b>MBE = (1/n) * Σ(yᵢ - ȳᵢ)</b>
+<center><b>MBE = (1/n) * Σ(yᵢ - ȳᵢ)</b></center>
 </ol>
 </li>
 <li><b>Classification Models :</b> predict the output from a set of finite categorical values.<br>
 <ol>
 <li>
 Cross-Entropy Loss<br>
-<b>Cross-Entropy Loss = -[yᵢ * log(ȳᵢ) + (1 - yᵢ) * log(1 - ȳᵢ)]</b><br>
 where,<br>
 i - i<sup>th</sup> training sample in a dataset,<br>
 n - number of training samples,<br>
@@ -95,7 +94,7 @@ yᵢ - Actual output of ith training sample,<br>
 </ul>
 
 <center>  
-<img style="mix-blend-mode: darken;" src="images\biasandweights.png" alt="Neural network illustration highlighting the weights and bias" width="55%">
+<img style="mix-blend-mode: darken;" src="images\biasandweights.png" alt="Neural network illustration highlighting the weights and bias" width="500px">
 <figcaption><strong>Fig. 3 Neural network illustration highlighting the weights and bias</strong></figcaption>
 </center>
 
@@ -111,7 +110,7 @@ yᵢ - Actual output of ith training sample,<br>
 Activation functions aid neural networks in tackling complex tasks, like distinguishing between cats and dogs, by enabling them to grasp non-linear concepts. Neurons use activation functions to decide whether to activate based on weighted input sums. If the sum exceeds a threshold, the neuron activates, passing output to the next layer. The main role of activation functions is to introduce non-linearity, crucial for the network to learn intricate patterns, as without them, the network would behave linearly.
 
 <center>  
-<img style="mix-blend-mode: darken;" src="images\ActivationFunction.png" alt=" Mathematical Model" width="45%">
+<img style="mix-blend-mode: darken;" src="images\ActivationFunction.png" alt=" Mathematical Model" width="450px">
 <figcaption><strong>Fig. 4   Mathematical Model</strong></figcaption><br>
 </center>
 
@@ -122,35 +121,35 @@ Common Activation Functions are:
 <b>Linear Activation:</b> This is the simplest type. It just scales the input by a certain factor. Imagine it like stretching or compressing a spring. However, it's rarely used in deep learning because it doesn't add much complexity. Formula for linear activation is:
 
 <center>  
-<img style="mix-blend-mode: darken;" src="images\linear.png" alt=" Biological neurons to Artificial neurons" width="90">
+<img style="mix-blend-mode: darken;" src="images\linear.png" alt=" Biological neurons to Artificial neurons" width="90px">
 </center>
 </li>
 <li>
 <b>Step Activation:</b> It's like a light switch. If the input is above a certain threshold, the neuron fires and gives an output of 1. Otherwise, it's inactive with an output of 0. It's not used very often either, as it's quite limited in what it can represent. Formula for Step activation is:
 
 <center>  
-<img style="mix-blend-mode: darken;" src="images\step.png" alt=" Biological neurons to Artificial neurons" width="180">
+<img style="mix-blend-mode: darken;" src="images\step.png" alt=" Biological neurons to Artificial neurons" width="180px">
 </center>
 </li>
 <li>
 <b>ReLU (Rectified Linear Unit) Activation:</b> This is like turning on a light switch if the input is positive, otherwise, it's off. It's very popular because it helps the network learn complex patterns effectively and quickly. Formula for ReLU activation is:
 
 <center>  
-<img style="mix-blend-mode: darken;" src="images\rehu.png" alt=" Biological neurons to Artificial neurons" width="140">
+<img style="mix-blend-mode: darken;" src="images\rehu.png" alt=" Biological neurons to Artificial neurons" width="140px">
 </center>
 </li>
 <li>
 <b>TanH (Hyperbolic Tangent) Activation:</b> Similar to the sigmoid, but it squashes inputs to a range between -1 and 1. It's useful when you want to allow negative values in the output. Formula for TanH activation is:
 
 <center>  
-<img style="mix-blend-mode: darken;" src="images\tanh.png" alt=" Biological neurons to Artificial neurons" width="150">
+<img style="mix-blend-mode: darken;" src="images\tanh.png" alt=" Biological neurons to Artificial neurons" width="150px">
 </center>
 </li>
 <li>
 <b>Sigmoid Activation Function:</b> It is commonly used as an activation function in artificial neural networks, particularly in feedforward neural networks. This is because it allows the network to introduce non-linearity into the model, which allows the neural network to learn more complex decision boundaries. Formula for Sigmoid activation is:
 
 <center>  
-<img style="mix-blend-mode: darken;" src="images\sigmoid.png" alt=" Biological neurons to Artificial neurons" width="150">
+<img style="mix-blend-mode: darken;" src="images\sigmoid.png" alt=" Biological neurons to Artificial neurons" width="150px">
 </center>
 </li>
 </ol>
@@ -159,7 +158,7 @@ Common Activation Functions are:
 
 Activation functions introduce non-linearity to neural networks. They help the network learn complex mappings between inputs and outputs.
 
-<table align="center" border="2" cellpadding="10" cellspacing="15"  style=" border-spacing: 10px; width: 80%;">
+<table align="center" border="2" cellpadding="10" cellspacing="15"  style=" border-spacing: 10px;">
             <caption style="text-align:center; font-weight:bold; color:black;">
                 Table: Common Activation Functions
             </caption>
