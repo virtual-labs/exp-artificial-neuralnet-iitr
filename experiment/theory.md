@@ -71,6 +71,7 @@ Loss functions are classified into two classes based on the type of learning tas
 <ol>
 <li>
 Cross-Entropy Loss<br>
+<center><b>Cross-Entropy Loss = -[yᵢ * log(ȳᵢ) + (1 - yᵢ) * log(1 - ȳᵢ)]</b><br></center>
 where,<br>
 i - i<sup>th</sup> training sample in a dataset,<br>
 n - number of training samples,<br>
