@@ -8,7 +8,7 @@ A typical neural network consists of three main types of layers : the input laye
 
 <center>  
 <img style="mix-blend-mode: darken;" src="images\ann.png" alt="The architecture of an artificial neural network">
-<figcaption><strong>Fig. 1 The architecture of an artificial neural network</strong></figcaption>s
+<figcaption><strong>Fig. 1 The architecture of an artificial neural network</strong></figcaption>
 </center>
 
 #### **Artificial neurons vs Biological neurons**
