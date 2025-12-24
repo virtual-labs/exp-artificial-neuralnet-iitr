@@ -1,0 +1,714 @@
+<!DOCTYPE html><html lang="en"><head>
+      <!--Google Tag Manager-->
+      <script class="gtm">
+        var dataLayer = [{
+        'labName': 'Virtual Lab',
+        'discipline': 'Test',
+        'college': 'IITR',
+        'phase': 'Testing',
+        'expName': 'TO STUDY AND IMPLEMENT THE WORKING OF AN ARTIFICIAL NEURAL NETWORK',
+        'expShortName': 'artificial-neuralnet'
+        }];
+    
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5NMQ9NQ');
+      </script>
+      <!--End Google Tag Manager-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    
+    	<meta name="experiment-short-name" content="artificial-neuralnet">
+    	<meta name="developer-institute" content="IITR">
+    	<meta name="learning-unit" content="TO STUDY AND IMPLEMENT THE WORKING OF AN ARTIFICIAL NEURAL NETWORK">
+    	<meta name="task-name" content="Theory">
+    
+    <!-- For iPhone -->
+    <meta name="msapplication-TileColor" content="#4076e0">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#4076e0">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#4076e0">
+    <title>Virtual Labs</title>
+    <link rel="shortcut icon" href="./assets/images/favicon.ico">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css" integrity="sha512-Oy18vBnbSJkXTndr2n6lDMO5NN31UljR8e/ICzVPrGpSud4Gkckb8yUpqhKuUNoE+o9gAb4O/rAxxw1ojyUVzg==" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Raleway&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/github-markdown.min.css">
+    <link rel="stylesheet" href="./assets/css/vlabs-style.css">
+    <link rel="stylesheet" href="./assets/css/toast.css">
+    <link rel="stylesheet" href="./assets/katex_assets/katex.min.css">
+    
+    <script src="./assets/js/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+      h1 {
+      font-size: 1.8rem;
+      }
+      h2 {
+      font-size: 1.4rem;
+      }
+      h3 {
+      font-size: 1.2rem;
+      }
+
+      h2, h3 {
+      font-weight: 800;
+      }
+    </style>
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"></head>
+  <body class="p-0 container-fluid vlabs-page d-flex flex-column justify-content-between">
+      <!--Google Tag Manager (noscript)-->
+      <noscript class="gtm">
+        <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-5NMQ9NQ" style="display:none;visibility:hidden" width="0">
+        </iframe>
+      </noscript>
+      <!--End Google Tag Manager (noscript)-->
+  
+      <header class="vlabs-header sticky-top bg-white">
+        <nav class="p-0 navbar navbar-light d-flex align-items-stretch">
+          
+          <button class="navbar-toggler px-4" type="button" onclick="toggle()">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="d-flex justify-content-center">        
+            <a href="https://vlab.co.in" class="navbar-brand">
+              <img src="./assets/images/vlabs-color-small-moe.jpg" alt="vlabs logo" class="vlabs-logo">
+            </a>
+          </div>
+          
+          <div id="headerNavbar" class="d-none border-top flex-grow-1 d-lg-flex align-items-center justify-content-end">
+            <div class="svc-rating-display">
+                <rating-display spreadsheetid="1x12nhpp0QvnsA6x-O1sV4IA9SAbfVsq_wiexWkutOmU" sheetname="Experiment-Database" columnname="Experiment Short Name" columnvalue="artificial-neuralnet" imagesdirectory="/plugins/svc-rating/images/">
+                </rating-display>
+            </div>      <div class="svc-rating-submit">
+                <rating-submit title="Rate" this="" experiment="">
+                </rating-submit>
+            </div>      <bug-report id="bug-report" title="[BUG REPORT] TO STUDY AND IMPLEMENT THE WORKING OF AN ARTIFICIAL NEURAL NETWORK" page-type="text" context-info="{&quot;organisation&quot;:&quot;Virtual Labs&quot;,&quot;developer_institute&quot;:&quot;IITR&quot;,&quot;expname&quot;:&quot;TO STUDY AND IMPLEMENT THE WORKING OF AN ARTIFICIAL NEURAL NETWORK&quot;,&quot;labname&quot;:&quot;Virtual Lab&quot;,&quot;phase&quot;:&quot;Testing&quot;}" checkbox-json="{&quot;text&quot;:[&quot;Insufficient Content&quot;],&quot;video&quot;:[&quot;Insufficient Content&quot;],&quot;assesment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;assessment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;simulation&quot;:[&quot;Simulation Not Working&quot;,&quot;Incorrect Results/Observations&quot;,&quot;Insufficient/Incorrect Instructions&quot;],&quot;DEFAULT&quot;:[&quot;Page Not Loading&quot;,&quot;Content Not Visible&quot;,&quot;Incorrect Content&quot;]}" button_style="border: none; color: #fff; background-color: #288ec8; text-align: center; font-size: 1.05rem; border-radius: 1em;padding: 0.6em 1.2em; margin: 0 10px" position="override" custom_button_class="v-button"></bug-report>
+          </div>
+        </nav>
+      </header>
+      <div class="container-fluid flex-fill d-flex flex-column vlabs-page-main">
+        <div class="row d-flex justify-content-between">
+          <div class="flex-column">
+          <div class="row py-4 px-4 breadcrumbs">
+          	<div class="title is-4 tools">Tools</div>
+          	<span class="mx-2">
+          		<i aria-hidden="true" class="fa fa-angle-right"></i>
+          	</span>
+          	<a href="performance-report.html" class="my-2 mx-3" target="_blank">
+          		<button class="v-button">Performance Tool</button>
+          	</a>
+          	<a href="validator-report.html" class="my-2 mx-3" target="_blank">
+          		<button class="v-button">Validation Tool</button>
+          	</a>
+          </div>
+          </div>
+        </div>
+        <div class="row flex-grow-1 d-flex flex-nowrap flex-column flex-lg-row">
+          <div class="modal fade popupmenu" id="popupMenu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">
+                              <a href="https://vlab.co.in" class="navbar-brand">
+                                  <img src="./assets/images/vlabs-color-small-moe.jpg" alt="vlabs logo" class="vlabs-logo">
+                              </a>
+                          </h5>
+                          <button type="button" class="btn-close align-self-center" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body nav-menu">
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="index.html" class="p-2 ">
+                                      Aim
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="theory.html" class="p-2  current-item ">
+                                      Theory
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="pretest.html" class="p-2 ">
+                                      Pretest
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="procedure.html" class="p-2 ">
+                                      Procedure
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="simulation.html" class="p-2 ">
+                                      Simulation
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="posttest.html" class="p-2 ">
+                                      Posttest
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="references.html" class="p-2 ">
+                                      References
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="contributors.html" class="p-2 ">
+                                      Contributors
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="feedback.html" class="p-2 ">
+                                      Feedback
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="nav flex-column sidebar nav-menu flex-shrink-0 px-lg-4 align-items-center align-items-lg-start hidden d-none d-lg-flex" id="menu">
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="index.html" class="p-2 ">
+                        Aim
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="theory.html" class="p-2  current-item ">
+                        Theory
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="pretest.html" class="p-2 ">
+                        Pretest
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="procedure.html" class="p-2 ">
+                        Procedure
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="simulation.html" class="p-2 ">
+                        Simulation
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="posttest.html" class="p-2 ">
+                        Posttest
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="references.html" class="p-2 ">
+                        References
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="contributors.html" class="p-2 ">
+                        Contributors
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="feedback.html" class="p-2 ">
+                        Feedback
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+          </div>          <div class="vlabs-page-content px-5 pb-4 flex-grow-1 markdown-body">
+            <div class="text-center fix-spacing">
+              <h2 id="to-study-and-implement-the-working-of-an-artificial-neural-network">To study and implement the working of an Artificial Neural Network</h2>
+          
+            </div>
+              <h3 id="introduction"><strong>Introduction</strong></h3>
+          <p>Artificial Neural Networks (ANNs) are computational models inspired by the structure and functionality of the human brain. These networks have gained significant attention and popularity due to their ability to learn patterns from data and make predictions. ANNs are widely used in various fields, including computer vision, natural language processing, robotics, finance, and more.</p>
+          <p>The architecture of a neural network refers to its overall structure and organization, including the arrangement of its layers and the number of nodes in each layer. The network architecture plays a crucial role in determining the network's capacity to learn complex patterns and make accurate predictions.</p>
+          <p>A typical neural network consists of three main types of layers : the input layer, hidden layer(s), and the output layer.</p>
+          <center>  
+          <img style="mix-blend-mode: darken;" src="images\ann.png" alt="The architecture of an artificial neural network">
+          <figcaption><strong>Fig. 1 The architecture of an artificial neural network</strong></figcaption>
+          </center>
+          
+          <h4 id="artificial-neurons-vs-biological-neurons"><strong>Artificial neurons vs Biological neurons</strong></h4>
+          <p>The concept of artificial neural networks comes from biological neurons found in human brains, so they share a lot of similarities in structure and function. The structure of artificial neural networks is inspired by biological neurons. A biological neuron has a cell body or soma to process the impulses, dendrites to receive them, and an axon that transfers them to other neurons. The input nodes of artificial neural networks receive input signals, the hidden layer nodes compute these input signals, and the output layer nodes compute the final output by processing the hidden layer’s results using activation functions.</p>
+          <center>  
+          <img style="mix-blend-mode: darken;" src="images\node.png" alt=" Biological neurons to Artificial neurons">
+          <figcaption><strong>Fig. 2 Biological neurons to Artificial neurons</strong></figcaption>
+          </center>
+          
+          
+          <h3 id="main-components-of-ann"><strong>Main components of ANN:</strong></h3>
+          <ol>
+          <li><strong>Input Layer:</strong></li>
+          </ol>
+          <p>The input layer is the initial layer of a neural network and serves as the entry point for external data. This layer receives the raw information or features from the dataset and passes them through to the subsequent layers for processing. Key characteristics of the input layer are:</p>
+          <ul type="disc">
+          <li><b>Nodes/Neurons :</b> Each node in the input layer represents a feature or attribute from the input data. For instance, in an image recognition task, each node might correspond to a pixel in the image, or in natural language processing, each node could represent a word in a sentence.</li>
+          <li><b>No Computation :</b> The input layer does not perform any computation. Its primary function is to transmit the raw input data to the network.</li>
+          <li><b>Dimensionality :</b> The number of nodes in the input layer is determined by the dimensionality of the input data. If the input is an image with dimensions of 32x32 pixels, the input layer would have 32*32 = 1024 nodes.</li>
+          <li><b>Normalization :</b> Sometimes, preprocessing steps like normalization are applied at the input layer to ensure that the input data is standardized, making it easier for the neural network to learn.</li>
+          </ul>
+          
+          <ol start="2">
+          <li><strong>Hidden Layer:</strong></li>
+          </ol>
+          <p>The hidden layer in a neural network is an intermediate layer situated between the input layer and the output layer. The hidden layer(s) processes the information from the input and contributes to the network's ability to learn and generalize. Here are some key points about hidden layers:</p>
+          <ul type="disc">
+          <li><b>Nodes/Neurons :</b> Each node in a hidden layer represents a learned feature or abstraction derived from the input data. The number of nodes in a hidden layer is a parameter that can be adjusted based on the complexity of the task and the characteristics of the data.</li>
+          <li><b>Computation :</b> The nodes in a hidden layer perform computations. Each node receives input from the nodes in the previous layer (either the input layer or another hidden layer), applies a weighted sum, and passes the result through an activation function. This introduces non-linearity to the network, allowing it to learn complex relationships in the data.</li>
+          <li><b>Activation Functions :</b> Activation functions, such as sigmoid, tanh, or rectified linear unit (ReLU), are applied to the output of each node in the hidden layer. These functions determine whether a neuron should be activated or not based on the weighted sum of its inputs. These functions introduce non-linearities, enabling the neural network to model more complex relationships in the data.</li>
+          <li><b>Feature Learning :</b> The hidden layers are crucial for feature learning and abstraction. As the network undergoes training, the weights of connections between nodes are adjusted to capture relevant patterns and relationships in the input data. The hidden layers act as hierarchical feature extractors, learning increasingly abstract representations of the input.</li>
+          <li><b>Depth and Width :</b> The depth and width of the hidden layers impact the network's capacity to learn and generalize. A deeper network with more hidden layers can potentially capture more complex features, while increasing the width (number of nodes) in a layer can provide more representational power.</li>
+          </ul>
+          
+          <ol start="3">
+          <li><strong>Output Layer:</strong></li>
+          </ol>
+          <p>The output layer is the final layer in a neural network, responsible for producing the network's predictions or outputs based on the information processed through the preceding layers. The structure and function of the output layer depend on the nature of the task the neural network is designed to solve, and it is often tailored to match the specific requirements of that task. Here are key aspects of the output layer:</p>
+          <ul type="disc">
+          <li><b>Nodes/Neurons :</b> The number of nodes in the output layer corresponds to the number of classes or dimensions in the target variable for the given task. For instance, in a binary classification task, there may be one output node for each class (e.g., class 0 and class 1). In a multiclass classification task, there would be as many nodes as there are classes.</li>
+          <li><b>Computation :</b> Each node in the output layer performs computations based on the information received from the nodes in the preceding layer (usually the last hidden layer). The computations typically involve weighted sums of inputs, and the result is often passed through an activation function. The choice of activation function in the output layer depends on the nature of the task.</li>
+          <li><b>Activation Functions :</b> The choice of activation function in the output layer is task-specific. For binary classification, a sigmoid activation function is commonly used, producing a probability-like output and for multiclass classification, a softmax activation function is often employed. It converts the raw output scores into probability distributions across multiple classes, ensuring that the sum of probabilities equals 1.</li>
+          <li><b>Loss Function :</b> It quantifies the difference between the predicted output of the network and the actual target values. The goal during training is to minimize this loss, as doing so leads to a more accurate and effective neural network. The choice of the loss function is tied to the task and the activation function in the output layer.</li>
+          
+          <p>Loss functions are classified into two classes based on the type of learning task:</p>
+          <ul type="circle">
+          <li><b>Regression Models :</b> predict continuous values.<br>
+          <ol>
+          <li>Mean Squared Error (MSE)</li>
+          <center><b>MSE = (1/n) * Σ(yᵢ - ȳᵢ)²</b></center>
+          <li>Mean Absolute Error (MAE)</li>
+          <center><b>MAE = (1/n) * Σ|yᵢ - ȳᵢ|</b></center>
+          <li>Mean Bias Error (MBE)</li>
+          <center><b>MBE = (1/n) * Σ(yᵢ - ȳᵢ)</b></center>
+          </ol>
+          </li>
+          <li><b>Classification Models :</b> predict the output from a set of finite categorical values.<br>
+          <ol>
+          <li>
+          Cross-Entropy Loss<br>
+          <center><b>Cross-Entropy Loss = -[yᵢ * log(ȳᵢ) + (1 - yᵢ) * log(1 - ȳᵢ)]</b><br></center>
+          where,<br>
+          i - i<sup>th</sup> training sample in a dataset,<br>
+          n - number of training samples,<br>
+          yᵢ - Actual output of ith training sample,<br>
+          ȳᵢ - Predicted value of ith training sample.<br>
+          </li>
+          
+          </ol>
+          </li></ul>
+          <li><b>Interpretation of Output :</b> The output layer's values or probabilities represent the network's prediction for each class. During training, the network adjusts its weights to minimize the difference between these predictions and the actual target values.</li>
+          </ul>
+          
+          <ol start="4">
+          <li><strong>Weight:</strong></li>
+          </ol>
+          <ul type="disc">
+          <li>Neural network weights are numerical values representing connection strength between nodes. They determine the impact of one node's output on another.</li>
+          <li>The goal is to find weights minimizing the difference between predicted and actual outputs.</li>
+          <li>The learning rate, affecting model convergence, determines the step size of weight updates.</li>
+          <li>Weights can be positive or negative, indicating whether a connection has a positive or negative impact on the receiving node's activation.</li>
+          <li>Larger weights amplify influence, while smaller weights attenuate it. Adjusting weights allows the network to assign varying importance levels to information, facilitating learning and pattern adaptation.</li>
+          </ul>
+          
+          <center>  
+          <img style="mix-blend-mode: darken;" src="images\biasandweights.png" alt="Neural network illustration highlighting the weights and bias" width="500px">
+          <figcaption><strong>Fig. 3 Neural network illustration highlighting the weights and bias</strong></figcaption>
+          </center>
+          
+          <ol start="5">
+          <li><p><strong>Bias:</strong></p>
+          <ul type="disc">
+          <li>Biases are constant values associated with each node in a neural network, including the input, hidden, and output nodes. Bias nodes introduce a level of flexibility and enable the network to learn and adapt to different situations.</li>
+          <li>Each bias node has its own associated bias value, which is conceptually similar to a weight. However, unlike weights, biases do not depend on any input; they provide a constant value that is added to the weighted sum of inputs of a node.</li>
+          <li>By adjusting the biases, the network can be fine-tuned to better fit the training data and generalize well to unseen data. Like weights, biases are updated during the training process to minimize the difference between predicted and actual outputs, making the network more accurate and robust.</li>
+          </ul></li>
+          <li><p><strong>Activation function:</strong></p>
+          </li>
+          </ol>
+          <p>Activation functions aid neural networks in tackling complex tasks, like distinguishing between cats and dogs, by enabling them to grasp non-linear concepts. Neurons use activation functions to decide whether to activate based on weighted input sums. If the sum exceeds a threshold, the neuron activates, passing output to the next layer. The main role of activation functions is to introduce non-linearity, crucial for the network to learn intricate patterns, as without them, the network would behave linearly.</p>
+          <center>  
+          <img style="mix-blend-mode: darken;" src="images\ActivationFunction.png" alt=" Mathematical Model" width="450px">
+          <figcaption><strong>Fig. 4   Mathematical Model</strong></figcaption><br>
+          </center>
+          
+          <p>Common Activation Functions are:</p>
+          <ul>
+          <li>
+          <b>Linear Activation:</b> This is the simplest type. It just scales the input by a certain factor. Imagine it like stretching or compressing a spring. However, it's rarely used in deep learning because it doesn't add much complexity. Formula for linear activation is:
+          
+          <center>  
+          <img style="mix-blend-mode: darken;" src="images\linear.png" alt=" Biological neurons to Artificial neurons" width="90px">
+          </center>
+          </li>
+          <li>
+          <b>Step Activation:</b> It's like a light switch. If the input is above a certain threshold, the neuron fires and gives an output of 1. Otherwise, it's inactive with an output of 0. It's not used very often either, as it's quite limited in what it can represent. Formula for Step activation is:
+          
+          <center>  
+          <img style="mix-blend-mode: darken;" src="images\step.png" alt=" Biological neurons to Artificial neurons" width="180px">
+          </center>
+          </li>
+          <li>
+          <b>ReLU (Rectified Linear Unit) Activation:</b> This is like turning on a light switch if the input is positive, otherwise, it's off. It's very popular because it helps the network learn complex patterns effectively and quickly. Formula for ReLU activation is:
+          
+          <center>  
+          <img style="mix-blend-mode: darken;" src="images\rehu.png" alt=" Biological neurons to Artificial neurons" width="140px">
+          </center>
+          </li>
+          <li>
+          <b>TanH (Hyperbolic Tangent) Activation:</b> Similar to the sigmoid, but it squashes inputs to a range between -1 and 1. It's useful when you want to allow negative values in the output. Formula for TanH activation is:
+          
+          <center>  
+          <img style="mix-blend-mode: darken;" src="images\tanh.png" alt=" Biological neurons to Artificial neurons" width="150px">
+          </center>
+          </li>
+          <li>
+          <b>Sigmoid Activation Function:</b> It is commonly used as an activation function in artificial neural networks, particularly in feedforward neural networks. This is because it allows the network to introduce non-linearity into the model, which allows the neural network to learn more complex decision boundaries. Formula for Sigmoid activation is:
+          
+          <center>  
+          <img style="mix-blend-mode: darken;" src="images\sigmoid.png" alt=" Biological neurons to Artificial neurons" width="150px">
+          </center>
+          </li>
+          
+          
+          <h4 id="common-activation-functions"><strong>Common Activation Functions</strong></h4>
+          <p>Activation functions introduce non-linearity to neural networks. They help the network learn complex mappings between inputs and outputs.</p>
+          <table align="center" border="2" cellpadding="10" cellspacing="15" style=" border-spacing: 10px;">
+                      <caption style="text-align:center; font-weight:bold; color:black;">
+                          Table: Common Activation Functions
+                      </caption>
+                      <tbody><tr style="background-color:#f2f2f2; font-weight:bold;">
+                        <th>S.No.</th>
+                        <th>Activation Function</th>
+                        <th>Mathematical Formula</th>
+                        <th>Output Range</th>   
+                      </tr>
+          <tr>
+                        <td>1</td>
+                        <td><b>Linear (Identity)</b></td>
+                        <td>f(x) = x</td>
+                        <td>(−∞, ∞)</td>            
+                      </tr>
+          
+          <tr>
+                        <td>2</td>
+                        <td><b>Step Function</b></td>
+                        <td>
+                          f(x) =
+                          { 1, if x ≥ 0;
+                          0, if x &lt; 0 }
+                        </td>
+                        <td>{0, 1}</td>     
+                      </tr>
+          
+          <tr>
+                        <td>3</td>
+                        <td><b>Sigmoid</b></td>
+                        <td>
+                          f(x) = 1 / (1 + e<sup>−x</sup>)
+                        </td>
+                        <td>(0, 1)</td>          
+                      </tr>
+          
+          <tr>
+                        <td>4</td>
+                        <td><b>Hyperbolic Tangent (Tanh)</b></td>
+                        <td>
+                          f(x) = (e<sup>x</sup> − e<sup>−x</sup>) / (e<sup>x</sup> + e<sup>−x</sup>)
+                        </td>
+                        <td>(−1, 1)</td>    
+                      </tr>
+          
+          <tr>
+                        <td>5</td>
+                        <td><b>ReLU (Rectified Linear Unit)</b></td>
+                        <td>f(x) = max(0, x)</td>
+                        <td>[0, ∞)</td> 
+                      </tr>
+          
+          <tr>
+                        <td>6</td>
+                        <td><b>Leaky ReLU</b></td>
+                        <td>
+                          f(x) = { x, if x &gt; 0; 0.01x, if x ≤ 0 }
+                        </td>
+                        <td>(−∞, ∞)</td>   
+                      </tr>
+          
+          <tr>
+                        <td>7</td>
+                        <td><b>Softmax</b></td>
+                        <td>
+                          f(x<sub>i</sub>) = e<sup>x<sub>i</sub></sup> / Σ e<sup>x<sub>j</sub></sup>
+                        </td>
+                        <td>(0, 1) &nbsp; (Σ = 1)</td>             
+                      </tr>
+          
+          <tr>
+                        <td>8</td>
+                        <td><b>Swish</b></td>
+                        <td>
+                          f(x) = x / (1 + e<sup>−x</sup>)
+                        </td>
+                        <td>(−∞, ∞)</td>  
+                      </tr>
+          
+          <tr>
+                        <td>9</td>
+                        <td><b>GELU</b></td>
+                        <td>
+                          f(x) = x × Φ(x)
+                        </td>
+                        <td>(−∞, ∞)</td>   
+                      </tr>
+          </tbody></table>
+                    <br>
+          
+          <p>These function can significantly impact the network's training, convergence, and generalization capabilities. The appropriate function should be chosen based on the specific characteristics of your data and problem domain.</p>
+          <h4 id="types-of-neural-networks"><strong>Types of Neural Networks:</strong></h4>
+          <ul type="disc">
+          
+          <li><b>Feedforward Neural Networks (FNN):</b> FNNs are the simplest form of ANNs, where information flows in one direction—from the input layer to the output layer. They are effective for tasks like image and speech recognition.</li>
+          <li><b>Recurrent Neural Networks (RNN):</b> Unlike FNNs, RNNs have connections that form cycles, allowing them to retain information over time. This makes them suitable for sequential data processing, such as in natural language understanding and time-series analysis.</li>
+          
+          <center>  
+          <img style="mix-blend-mode: darken;" src="images\RNN-vs-FNN.png" alt="Recurrent Vs Feedforward networks">
+          <figcaption><strong>Fig. 5 Recurrent Vs Feedforward networks</strong></figcaption><br>
+          </center>
+          
+          <li><b>Convolutional Neural Networks (CNNs):</b> CNNs excel in tasks related to image recognition and computer vision. They leverage convolutional layers to automatically learn spatial hierarchies of features.</li>
+          </ul>
+          
+          <center>  
+          <img style="mix-blend-mode: darken;" src="images\cnn.png" alt="Convolutional Neural Network">
+          <figcaption><strong>Fig. 6 Convolutional Neural Network</strong></figcaption><br>
+          </center>
+          
+          
+          <p><strong>Advantages of Artificial Neural Networks:</strong></p>
+          <ul type="disc">
+          <li><b>Non-linearity :</b> ANNs can model complex, non-linear relationships between inputs and outputs, making them suitable for tasks that involve intricate patterns and data relationships.</li>
+          <li><b>Adaptability and Generalization :</b> ANNs can adapt and learn from data, enabling them to generalize patterns and make predictions on new, unseen data.</li>
+          <li><b>Parallel Processing :</b> ANNs can process multiple inputs simultaneously, leveraging parallel computing capabilities and speeding up computation for certain tasks.</li>
+          <li><b>Feature Learning :</b> ANNs can automatically learn relevant features from the input data, reducing the need for manual feature engineering, which can be time-consuming and error-prone.</li>
+          <li><b>Highly Expressive :</b> Deep Neural Networks, a type of ANN, can learn hierarchical representations of data, allowing them to handle complex tasks like image and speech recognition.</li>
+          <li><b>Wide Applicability :</b> ANNs have found applications in various domains, such as computer vision, natural language processing, speech recognition, recommendation systems, and more.</li>
+          </ul>
+          <br>
+          
+          <p><strong>Disadvantages of Artificial Neural Networks:</strong></p>
+          <ul type="disc">
+          <li><b>Black Box Nature :</b> ANNs can be challenging to interpret, especially deep neural networks. Understanding how and why they arrive at specific conclusions can be difficult, leading to potential trust and transparency issues.</li>
+          <li><b>Large Amount of Data and Computation :</b> Training ANNs typically requires a large amount of labeled data and substantial computational power. Deep architectures can be computationally intensive and time-consuming to train.</li>
+          <li><b>Overfitting :</b> ANNs can be prone to overfitting, especially when the model is too complex relative to the available data. Overfitting occurs when the model performs well on the training data but poorly on new, unseen data.</li>
+          <li><b>Hyperparameter Sensitivity :</b> ANNs have many hyperparameters (e.g., learning rate, number of layers, neurons per layer), and tuning these hyperparameters can be a challenging and iterative process.</li>
+          <li><b>Data Dependency :</b> The performance of ANNs heavily relies on the quality and representativeness of the training data. Biased or noisy data can adversely affect model accuracy.</li> 
+          <li><b>Lack of Causality :</b> ANNs often excel at pattern recognition but might not provide insights into causal relationships between variables, making them less suitable for certain scientific or causal inference tasks.</li>
+          
+          
+          
+          </ul></ul></div>
+          <div class="bug-report-mobile">
+              <bug-report id="bug-report" title="[BUG REPORT] TO STUDY AND IMPLEMENT THE WORKING OF AN ARTIFICIAL NEURAL NETWORK" page-type="text" context-info="{&quot;organisation&quot;:&quot;Virtual Labs&quot;,&quot;developer_institute&quot;:&quot;IITR&quot;,&quot;expname&quot;:&quot;TO STUDY AND IMPLEMENT THE WORKING OF AN ARTIFICIAL NEURAL NETWORK&quot;,&quot;labname&quot;:&quot;Virtual Lab&quot;,&quot;phase&quot;:&quot;Testing&quot;}" checkbox-json="{&quot;text&quot;:[&quot;Insufficient Content&quot;],&quot;video&quot;:[&quot;Insufficient Content&quot;],&quot;assesment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;assessment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;simulation&quot;:[&quot;Simulation Not Working&quot;,&quot;Incorrect Results/Observations&quot;,&quot;Insufficient/Incorrect Instructions&quot;],&quot;DEFAULT&quot;:[&quot;Page Not Loading&quot;,&quot;Content Not Visible&quot;,&quot;Incorrect Content&quot;]}" position="override" button_style="
+                          position: fixed; 
+                          bottom: 20px;
+                          right: 20px;
+                          z-index: 1;
+                          font-size: 0;
+                          padding: 25px;
+                          border-radius: 50%;
+                          border: none;
+                          background-color: #0fc0ff;
+                          background-image: url(data:image/png;base64,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);
+                          background-repeat: no-repeat;
+                          background-position: center;
+                          background-size: 30px;
+                          filter: invert(1);">
+              </bug-report>
+          </div>        </div>
+      </div>
+      <footer class="text-light pt-2 vlabs-footer d-flex flex-column">
+        <div class="row px-5 mx-0">
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Community Links</span>
+            <a href="https://www.sakshat.ac.in/" class="text-light">Sakshat Portal</a>
+            <a href="http://outreach.vlabs.ac.in/" class="text-light">Outreach Portal</a>
+            <a href="https://vlab.co.in/faq" class="text-light">FAQ: Virtual Labs</a>
+          </div>
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Contact Us</span>
+            <span> Phone: General Information: 011-26582050 </span>
+            <span> Email: support@vlabs.ac.in </span>
+          </div>
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Follow Us</span>
+            <div class="social-links">
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #55acee;" href="https://twitter.com/TheVirtualLabs">
+      	  <i class="fab fa-twitter"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #3b5998;" href="https://www.facebook.com/Virtual-Labs-IIT-Delhi-301510159983871/">
+      	  <i class="fab fa-facebook"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #e52d27;" href="https://www.youtube.com/watch?v=asxRaOgk6a0">
+      	  <i class="fab fa-youtube"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #2867B2;" href="https://in.linkedin.com/in/virtual-labs-008ba9136">
+      	  <i class="fab fa-linkedin"></i>
+      	</a>
+            </div>
+          </div>
+        </div>
+        <div class="m-0 py-2 text-center" style="font-family: &quot;Open Sans&quot;, sans-serif; background: #212121;">
+          <a class="text-primary font-weight-bold" href="https://www.gnu.org/licenses/agpl-3.0.en.html"> AGPL 3.0 </a>
+          &nbsp;&amp;&nbsp;
+          <a class="text-primary font-weight-bold" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"> Creative Commons (CC BY-NC-SA 4.0) </a>
+        </div>
+      </footer>
+    <script src="./assets/js/toggleSidebar.js"></script>
+    <script src="./assets/js/event-handler.js"></script>
+
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register("sw.js");
+        });
+      }
+    </script>
+  
+
+<script type="module" src="https://cdn.vlabs.ac.in/bug-report/vlabs-bug-report.js"></script><script type="module" src="/exp-artificial-neuralnet-iitr/plugins/svc-rating/index.js"></script><script type="module" src="/exp-artificial-neuralnet-iitr/plugins/svc-rating/config.js"></script><script type="module" src="https://apis.google.com/js/api.js"></script></body></html>
