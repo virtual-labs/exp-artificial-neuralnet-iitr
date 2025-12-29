@@ -159,7 +159,8 @@ Common Activation Functions are:
 
 Activation functions introduce non-linearity to neural networks. They help the network learn complex mappings between inputs and outputs.
 
-<table align="center" border="2" cellpadding="10" cellspacing="15"  style=" border-spacing: 10px;">
+<table border="2" cellpadding="10" cellspacing="15"
+       style="border-spacing:10px; margin: 0 auto;">
             <caption style="text-align:center; font-weight:bold; color:black;">
                 Table: Common Activation Functions
             </caption>
@@ -237,15 +238,6 @@ Activation functions introduce non-linearity to neural networks. They help the n
                 f(x) = x / (1 + e<sup>−x</sup>)
               </td>
               <td>(−∞, ∞)</td>  
-            </tr>
-
-<tr>
-              <td>9</td>
-              <td><b>GELU</b></td>
-              <td>
-                f(x) = x × Φ(x)
-              </td>
-              <td>(−∞, ∞)</td>   
             </tr>
 </table>
           <br>
