@@ -159,12 +159,16 @@ Common Activation Functions are:
 
 Activation functions introduce non-linearity to neural networks. They help the network learn complex mappings between inputs and outputs.
 
-<table border="2" cellpadding="10" cellspacing="15"
+<center>  
+<img style="mix-blend-mode: darken;" src="images\Ex-1.1.jpg" alt="Training Dataset T">
+</center><br>
+
+<!-- <table border="2" cellpadding="10" cellspacing="15"
        style="border-spacing:10px; margin: 0 auto;">
             <caption style="text-align:center; font-weight:bold; color:black;">
                 Table: Common Activation Functions
             </caption>
-            <tr style="background-color:#f2f2f2; font-weight:bold;">
+            <tr style="background-color:#7fc3e1; font-weight:bold;">
               <th>S.No.</th>
               <th>Activation Function</th>
               <th>Mathematical Formula</th>
@@ -240,7 +244,7 @@ Activation functions introduce non-linearity to neural networks. They help the n
               <td>(−∞, ∞)</td>  
             </tr>
 </table>
-          <br>
+          <br> -->
 
 These function can significantly impact the network's training, convergence, and generalization capabilities. The appropriate function should be chosen based on the specific characteristics of your data and problem domain.
 
