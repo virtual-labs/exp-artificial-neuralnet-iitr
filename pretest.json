@@ -1,0 +1,52 @@
+[
+  {
+    "question": "Which of the following is not a type of artificial neural network?",
+    "answers": {
+      "a": "Feedforward Neural Network",
+      "b": "Recurrent Neural Network",
+      "c": "Convolutional Neural Network",
+      "d": "Decision Tree Neural Network"
+    },
+    "correctAnswer": "d"
+  },
+  {
+    "question": "What is the primary inspiration behind Artificial Neural Networks (ANNs)?",
+    "answers": {
+      "a": "Computer programming",
+      "b": "Human brain",
+      "c": "Quantum mechanics",
+      "d": "Genetic algorithms"
+    },
+    "correctAnswer": "b"
+  },
+  {
+    "question": "Which activation function is commonly used in the output layer for binary classification tasks?",
+    "answers": {
+      "a": "ReLU",
+      "b": "Sigmoid",
+      "c": "Tanh",
+      "d": "Softmax"
+    },
+    "correctAnswer": "b"
+  },
+  {
+    "question": "The process of adjusting the weights of a neural network during training is known as:",
+    "answers": {
+      "a": "Forward Propagation",
+      "b": "Backward Propagation",
+      "c": "Gradient Descent",
+      "d": "Activation Function"
+    },
+    "correctAnswer": "b"
+  },
+  {
+    "question": "Which layer of a neural network is responsible for making predictions or producing output values?",
+    "answers": {
+      "a": "Input Layer",
+      "b": "Hidden Layer",
+      "c": "Output Layer",
+      "d": "Dropout Layer"
+    },
+    "correctAnswer": "c"
+  }
+]
